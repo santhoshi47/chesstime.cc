@@ -1,0 +1,21 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		
+	int t,n;
+	Scanner s=new Scanner(System.in);
+	t=s.nextInt();
+	{
+	    for(int i=1;i<=t;i++)
+      {
+	    n=s.nextInt();
+	n=n%10;
+	System.out.println(n);
+	}
+  }
+	}
+}
