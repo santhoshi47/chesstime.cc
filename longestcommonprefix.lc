@@ -1,0 +1,33 @@
+//suffix or preficx code can be optimised by using sorting//
+import java.util.Arrays;
+
+class Solution {
+    public String longestCommonPrefix(String[] strs) {
+ 
+StringBuilder result = new StringBuilder();
+//StringBuilder in Java is a class used to create a mutable, or in other words, a modifiable succession of characters//
+
+
+        int i;
+        
+           Arrays.sort(strs);
+           //The java string toCharArray() method converts the given string into a sequence of characters.//
+           //after sorting just take first string and last string and compare//
+        char[] first=strs[0].toCharArray();
+           char[] last=strs[strs.length-1].toCharArray();
+        {
+            for(i=0;i<first.length;i++)
+            {
+                if(first[i]!=last[i])
+                    break;
+                result.append(first[i]);
+            }
+        }return result.toString();
+    }
+    public static void main(String args[])
+    {
+        String str[]={"flower","flow","flight"};
+        Solution t=new Solution();
+        t.longestCommonPrefix(str);
+    }
+}
