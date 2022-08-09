@@ -1,0 +1,25 @@
+//Approach: Follow the steps below to solve the problem:
+
+Initialize a variable count to store the number of opening parentheses, i.e. ‘(‘.
+Add every ‘(‘ to the result if count is greater than 0, i.e. add all ‘(‘ after the first ‘(‘ of a primitive substring is encountered.
+Add every ‘)’ to the result if count is greater than 0, i.e. add all ‘)’ before the last ‘)’ of a primitive substring is encountered.
+Finally, print the resultant string obtained.
+
+
+
+class Solution {
+    public String removeOuterParentheses(String s) {
+        int count=0;
+        String res = "";
+  for (int c = 0;
+           c < s.length(); c++)
+  {
+    if (s.charAt(c) == '(' &&count++>0)
+      res += s.charAt(c);
+    if (s.charAt(c) == ')'&&count-->1)
+      res += s.charAt(c);
+  }
+
+  return res;
+    
+}}
