@@ -1,0 +1,11 @@
+class Solution {
+    public int mySqrt(int x) {
+        int start=1;
+        int end=x;
+        while(end>start)
+        {
+            end=start+(end-start)/2;
+            start=x/end;
+        }
+        return end;
+}}
