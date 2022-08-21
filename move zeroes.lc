@@ -1,0 +1,19 @@
+class Solution {
+    public void moveZeroes(int[] nums) {
+        int insertposi=0;
+        for(int i=0;i<nums.length;i++)
+        {
+            if(nums[i]!=0)
+            {
+                nums[insertposi]=nums[i];
+                insertposi++;
+            }
+        }
+        while(insertposi<nums.length){
+            nums[insertposi++]=0;
+        
+    }}}
+    
+    
+    
+    https://youtu.be/k5lIW5XxC7g(explanation)
