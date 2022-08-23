@@ -1,0 +1,23 @@
+class Solution {
+    public boolean isHappy(int n) {
+         int rem = 0, sum = 0;
+        int num=n;
+        if(n==1||n==7)
+            return true;
+        else if(n<=9)
+            return false;
+        while(n > 0){  
+            rem = n%10;  
+            sum = sum + (rem*rem);  
+            n = n/10;  
+        }  
+       return isHappy(sum);
+    }
+    
+}
+    
+   Explanation:
+12 + 92 = 82
+82 + 22 = 68
+62 + 82 = 100
+12 + 02 + 02 = 1
