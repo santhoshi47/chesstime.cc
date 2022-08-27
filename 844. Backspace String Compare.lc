@@ -1,0 +1,21 @@
+class Solution {
+    public boolean backspaceCompare(String s, String t) {
+        s=reverse(s);
+        t=reverse(t);
+        return s.equals(t);
+    }
+    private String reverse(String s)  {  
+        Stack<Character> st=new Stack<>();
+       for(char c:s.toCharArray())
+       {
+           if(!st.isEmpty()&&c=='#')
+               st.pop();
+           else if(c!='#')
+              st.push(c);
+       }
+        StringBuilder ss=new StringBuilder();
+        while(!st.isEmpty())
+            ss.append(st.pop());
+        return ss.reverse().toString();
+    }}
+        
