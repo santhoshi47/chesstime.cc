@@ -1,0 +1,17 @@
+class Solution {
+    public int minimumOperations(int[] nums) {
+        Set<Integer> set=new HashSet<>();
+        for(int n:nums)
+        {
+            if(n!=0)
+            set.add(n);
+        }
+    return set.size();
+    }}
+    
+    
+    
+    
+    The key to solving this question is to realize that we are trying to find the number of different non-zero elements. We can achieve this by using a HashSet.
+    hashset doesnt contain any duplicates,so size can be returned.
+    
