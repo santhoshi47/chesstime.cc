@@ -1,0 +1,18 @@
+class Solution {
+    public int titleToNumber(String columnTitle) {
+        int res=0;
+        for(char ch:columnTitle.toCharArray())
+        {
+            res=res*26+(ch-'A')+1;
+        }
+        return res;
+    }
+}
+
+
+for example: ZY(z=26,y=25)
+res=res*26+(ch-'A)+1
+   =26*26+('Y'-'A)+1
+   =676  +(25-1)  +1
+   =676+24+1
+   =701
