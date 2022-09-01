@@ -1,0 +1,14 @@
+class Solution {
+    public int maximumProduct(int[] nums) {
+        Arrays.sort(nums);
+        int i=nums.length;
+          int  m=nums[i-1]*nums[i-2]*nums[i-3];
+        int n=nums[0]*nums[1]*nums[i-1];
+    return Math.max(m,n);
+    }
+}
+
+for positive [1,2,3,4],last 3 numbers product will be maximum,i.e m.
+for negative [-1,-2,-3,-4],last 3 numbers are -3,-2,-1 so after product we get -6.,i.e n.
+
+https://youtu.be/9A4Bebss1WQ(explanation)
