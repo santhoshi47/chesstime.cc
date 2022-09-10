@@ -13,6 +13,7 @@ class Solution {
                 count++;
             }else
             //so we will add elements
+            //as hashset dont allow duplicate values only one element copy will be there
                 h.add(s.charAt(i));
         }
         if(!h.isEmpty()) return count*2+1;
