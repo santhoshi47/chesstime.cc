@@ -1,0 +1,9 @@
+class Solution {
+    public boolean repeatedSubstringPattern(String s) {
+        String ss = s + s;
+            ss = ss.substring(1, ss.length() - 1);
+            return ss.contains(s);
+     }
+     }
+     
+     //if we double and checkthe string it will always be equal to s,if there is pattern in string.
