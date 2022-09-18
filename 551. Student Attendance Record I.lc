@@ -1,0 +1,19 @@
+class Solution {
+    public boolean checkRecord(String s) {
+        int count=0;
+        int count1=0;
+        char[] ss=s.toCharArray();
+        for(int i=0;i<ss.length;i++)
+        {
+            if(ss[i]=='L')
+                count++;
+            else
+                count= 0;
+            if(ss[i]=='A')
+                count1++;
+            if(count>2||count1>1)
+        return false;
+        }
+        return true;
+    }
+}
