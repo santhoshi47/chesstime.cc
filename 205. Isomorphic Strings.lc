@@ -1,0 +1,30 @@
+class Solution {
+    public boolean isIsomorphic(String s, String t) {
+        HashMap<Character,Character> a=new HashMap<>();
+        HashMap<Character,Character> b=new HashMap<>();
+        for(int i=0;i<s.length();i++)
+        {
+            char aa=s.charAt(i);
+            char bb=t.charAt(i);
+            if(a.containsKey(aa)==true)
+            //returns true or false
+            {
+                if(a.get(aa)!=bb)
+                //gives key of that element
+                    return false;
+            }
+            if(b.containsKey(bb)==true)
+            {
+                if(b.get(bb)!=aa)
+                    return false;
+            }
+            a.put(aa,bb);
+            b.put(bb,aa);
+        }
+        return true;
+    }
+}
+
+
+
+https://youtu.be/GixTBEkxudg(explanation)
