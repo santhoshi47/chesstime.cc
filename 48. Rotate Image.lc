@@ -20,3 +20,24 @@ class Solution {
             h--;
     }}
 }}
+
+
+
+//using stack
+class Solution {
+    public void rotate(int[][] matrix) {
+        Stack<Integer> s=new Stack<>();
+        for(int i=0;i<matrix.length;i++)
+        {
+            for(int j=matrix.length-1;j>=0;j--)
+            {
+                s.push(matrix[i][j]);
+            }
+        }
+        for(int i=0;i<matrix.length;i++)
+        {
+            for(int j=0;j<matrix.length;j++)
+            {
+            int x=s.pop();
+            matrix[j][i]=x;
+        }}}}
