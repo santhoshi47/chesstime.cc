@@ -1,0 +1,4 @@
+public static final String regularExpression ="[a-zA-Z]\\w{7,29}";
+
+username can start from either smallcase alphabets,or capitals and can contain any words.
+\\w{7,29} means...[a-zA-Z0-9_]
