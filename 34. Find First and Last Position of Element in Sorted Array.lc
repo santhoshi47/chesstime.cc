@@ -1,0 +1,21 @@
+class Solution {
+    public int[] searchRange(int[] nums, int target) {
+        ArrayList<Integer> ar=new ArrayList<>();
+        for(int i=0;i<nums.length;i++)
+        {
+            if(nums[i]==target)
+                ar.add(i);
+                
+        }
+        int a[]=new int[2];
+        if(ar.isEmpty())
+        {
+            a[0]=-1;
+            a[1]=-1;
+        }
+        else{
+            a[0]=ar.get(0);
+            a[1]=ar.get(ar.size()-1);
+    }
+    return a;
+    }}
