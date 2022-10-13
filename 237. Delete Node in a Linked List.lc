@@ -1,0 +1,9 @@
+class Solution {
+    public void deleteNode(ListNode node) {
+        node.val=node.next.val;
+        node.next=node.next.next;
+    
+}}
+4->5->6->7
+in this to remove node 6,replace 6 with 7
+if u want to remove node 5,replace 5 with 6, and then replace 6 with 7.
