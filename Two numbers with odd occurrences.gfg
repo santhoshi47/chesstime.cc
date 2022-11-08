@@ -1,0 +1,21 @@
+class Solution
+{
+    public int[] twoOddNum(int Arr[], int N)
+    {
+        var ans = new TreeSet<Integer>();
+        //treeset dtores sorted elements
+        for(var i : Arr)
+        {
+            if(ans.contains(i))
+            {
+                ans.remove(i);
+            }
+            else
+            {
+                ans.add(i);
+            }
+        }
+        return new int[] {ans.pollLast(),ans.pollLast()};
+        //polllast adds element in last and removes the elements 
+    }
+}
