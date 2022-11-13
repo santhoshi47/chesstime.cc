@@ -1,0 +1,9 @@
+class Solution {
+    public String reverseWords(String s) {
+        String[] ss=s.trim().split(" +");
+        Collections.reverse(Arrays.asList(ss));
+        //makes a list from array
+        return String.join(" ",ss);
+        //joins the string with spaces intact
+    }}
+        
