@@ -1,0 +1,26 @@
+class Solution {
+    public String mostCommonWord(String paragraph, String[] banned) {
+        HashSet<String> banned_words=new HashSet<>();
+        for(String word:banned)
+        {
+            banned_words.add(word);
+        }
+        HashMap<String,Integer> map=new HashMap<>();
+        
+        for(String valid_word:paragraph.replaceAll("[^a-zA-Z]"," ").toLowerCase().split(" "))
+        {
+            if(!banned_words.contains(valid_word))
+                map.put(valid_word,map.getOrDefault(valid_word,0)+1);
+        }
+        map.remove("");
+        String result="";
+        for(String s:map.keySet())
+        {
+            if(result.equals("")||map.get(s)>map.get(result))
+            {
+                result=s;
+            }
+        }
+    return result;
+    }
+}
